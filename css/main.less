@@ -1,0 +1,124 @@
+@blue: #3498db;
+@darkBlue: #2980b9;
+@navy: #34495e;
+@darkNavy: #34495e;
+@grey: #95a5a6;
+@darkGrey: #7f8c8d;
+@turk: #1abc9c;
+@darkTurk: #16a085;
+@green: #2ecc71;
+@baseFont: 22px;
+
+h1{
+	font-size: @baseFont * 3;
+}
+h2{
+	font-size: @baseFont * 1.5; 
+}
+
+p{
+	font-size: @baseFont - 2;
+}
+
+.roundedButton{
+	border-radius: 10px;
+	background: @darkNavy;
+	color: white;
+	
+}
+
+.fontStyle(@fontColor){
+	font-family: 'helvetica';
+	font-size: @baseFont;
+	color: @fontColor;
+	font-weight: 300;
+}
+
+.square(@size){
+	width:@size;
+	height:@size;
+	border: solid 25px @darkBlue;
+}
+
+body{
+	color: white;
+	background: @blue;
+	padding: 0px;
+	margin: 0;
+	margin: 0 auto;
+	line-height: 25px;
+	.fontStyle("white");
+}
+
+#container{
+	width: 100%;
+	max-width: 1280px;
+	margin: 15px auto;
+}
+
+header{
+	background: @darkBlue;
+	padding: 10px;
+	width: 100%px;
+
+	nav{
+		padding: 10px;
+		background: @grey;
+		ul{
+			padding: 0px;
+			list-style-type: none;
+			li{
+				display: inline;
+				margin-right: 15px;
+				&:last-child{
+					margin-right: 0px;
+				}
+				&:nth-child(2){
+					color: @darkNavy;
+				}
+			}
+		}
+	}
+}
+
+section{
+	width: 100%;
+	article{
+		header{
+			background: @navy;
+			h2{
+				color: @green;
+			}
+			p{
+				padding: 0px;
+				a{
+					text-decoration: none;
+					color: @turk;
+					-webkit-transition: all 0.3s;
+					&:hover{
+						color: @darkTurk;
+					}
+				}
+			}	
+		}
+
+		p{
+			padding: 10px;
+			button[type="submit"]{
+				.roundedButton;
+				padding: 5px;
+			}
+		}
+	}
+}
+
+footer{
+	p{
+		padding: 10px;
+	}
+
+	.mySquare{
+		.square(200px);
+		background-color: #e74c3c;
+	}
+}
